@@ -52,8 +52,10 @@ function operate(num1, num2, operator)
         alert("Please select a valid operator");
     }
 }
+const display = document.querySelector(".calc-display");
+const clear = document.getElementById("clearButton");
 
-operate(2, 4, "+");
-operate(3, 5, "*");
-operate(2, 7, "-");
-operate(25, 5, "/");
+// Clears calc display text
+clear.addEventListener("click", () => {
+    display.textContent = "";
+});
