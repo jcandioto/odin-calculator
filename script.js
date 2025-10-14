@@ -1,3 +1,7 @@
+let num1 = 0;
+let num2 = 0;
+let operator = "";
+
 // Addends are numbers being added together
 function add(addend1, addend2)
 {
@@ -25,3 +29,31 @@ function divide(dividend, divisor)
     return dividend / divisor;
 }
 
+function operate(num1, num2, operator)
+{
+    if(operator=="+")
+    {
+        console.log(add(num1, num2));
+
+    } else if(operator=="-")
+    {
+        console.log(subtract(num1, num2));
+
+    } else if(operator=="*")
+    {
+        console.log(multiply(num1, num2));
+
+    } else if(operator=="/")
+    {
+        console.log(divide(num1, num2));
+
+    } else
+    {
+        alert("Please select a valid operator");
+    }
+}
+
+operate(2, 4, "+");
+operate(3, 5, "*");
+operate(2, 7, "-");
+operate(25, 5, "/");
